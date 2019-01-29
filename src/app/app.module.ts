@@ -6,16 +6,30 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatInputModule, MatSelectModule, MatRadioModule, MatCardModule, MatGridListModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule, MatTreeModule } from '@angular/material';
 import { MapPageComponent } from './map-page/map-page.component';
 import { ListPageComponent } from './list-page/list-page.component';
+import { AddrComponent } from './addr/addr.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ShippingComponent } from './shipping/shipping.component';
+import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
+import { MainTableComponent } from './main-table/main-table.component';
+import { MainTreeComponent } from './main-tree/main-tree.component';
+import { MainDragDropComponent } from './main-drag-drop/main-drag-drop.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
     MapPageComponent,
-    ListPageComponent
+    ListPageComponent,
+    AddrComponent,
+    ShippingComponent,
+    MainDashboardComponent,
+    MainTableComponent,
+    MainTreeComponent,
+    MainDragDropComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +40,19 @@ import { ListPageComponent } from './list-page/list-page.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatMenuModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTreeModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
