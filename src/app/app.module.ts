@@ -17,6 +17,12 @@ import { MainTableComponent } from './pages/main-table/main-table.component';
 import { MainTreeComponent } from './pages/main-tree/main-tree.component';
 import { MainDragDropComponent } from './pages/main-drag-drop/main-drag-drop.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MapLeafletComponent } from './pages/map-leaflet/map-leaflet.component';
+import { MapBaiduComponent } from './pages/map-baidu/map-baidu.component';
+import { MapGoogleComponent } from './pages/map-google/map-google.component';
+import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { BaiduMapModule } from 'angular2-baidu-map';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -29,7 +35,10 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MainDashboardComponent,
     MainTableComponent,
     MainTreeComponent,
-    MainDragDropComponent
+    MainDragDropComponent,
+    MapLeafletComponent,
+    MapBaiduComponent,
+    MapGoogleComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +61,12 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
     MatPaginatorModule,
     MatSortModule,
     MatTreeModule,
-    DragDropModule
+    DragDropModule,
+    LeafletModule.forRoot(),
+    BaiduMapModule.forRoot({ ak: 'IrTso78lj42f4AX7siKWzfM8ROHTYkMh' }),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBwko19tJnD4Ea3EnvKamfeySfv_RnpJ4Y'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
